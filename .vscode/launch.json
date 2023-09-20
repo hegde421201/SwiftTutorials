@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+
+
+    "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug SwiftTutorials",
+      "program": "${workspaceFolder:SwiftTutorials}/.build/debug/SwiftTutorials",
+      "args": [],
+      "cwd": "${workspaceFolder:SwiftTutorials}",
+      "preLaunchTask": "swift: Build Debug SwiftTutorials"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Release SwiftTutorials",
+      "program": "${workspaceFolder:SwiftTutorials}/.build/release/SwiftTutorials",
+      "args": [],
+      "cwd": "${workspaceFolder:SwiftTutorials}",
+      "preLaunchTask": "swift: Build Release SwiftTutorials"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Test SwiftTutorials",
+      "program": "/Applications/Xcode.app/Contents/Developer/usr/bin/xctest",
+      "args": [".build/debug/SwiftTutorialsPackageTests.xctest"],
+      "cwd": "${workspaceFolder:SwiftTutorials}",
+      "preLaunchTask": "swift: Build All"
+    }
+  ]
+
+    
+}
